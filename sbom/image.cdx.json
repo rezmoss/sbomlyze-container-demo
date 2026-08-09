@@ -176,6 +176,87 @@
         }
       ],
       "purl": "pkg:npm/fastify@5.4.0"
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:npm/avvio@9.1.0",
+      "name": "avvio",
+      "version": "9.1.0",
+      "supplier": {
+        "name": "avvio maintainers <security@example.com>"
+      },
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "4cce2f7548dd6d47d680577c787d49575cb9779436c1d136738300103382ee78"
+        },
+        {
+          "alg": "SHA-512",
+          "content": "c92629ebbcd1bada55a21319a3f765855e105167773c59b67bf04e71bc60fe4a04f34374ffbefd6abae0db48a424b8498a67e112680eaef999382eeb6e5bad83"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "purl": "pkg:npm/avvio@9.1.0"
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:npm/fastq@1.19.1",
+      "name": "fastq",
+      "version": "1.19.1",
+      "supplier": {
+        "name": "fastq maintainers <security@example.com>"
+      },
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "d27584073f5cf6d9e73769a5466484a10385f98ea0b09f3d7f55a8801881a01b"
+        },
+        {
+          "alg": "SHA-512",
+          "content": "92336b078967eaec944d04b89ded0e7bdc6feae0ec0093d276794c7b9756633acaa948dcbe8a71e791e366c1daac760a474bbe6bf01dbe34249c07d7e1372c15"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "purl": "pkg:npm/fastq@1.19.1"
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:npm/reusify@1.1.0",
+      "name": "reusify",
+      "version": "1.1.0",
+      "supplier": {
+        "name": "reusify maintainers <security@example.com>"
+      },
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "49a719604e00d222b4f894e54e83f6a37eacefb85bbd7d7ff41d0b3cc6da47e4"
+        },
+        {
+          "alg": "SHA-512",
+          "content": "dfd1a70ee0984c9e701983c320df40fc6c9c7e1681e5f58d604ae8dacfa76b750ca9a50d01e03c608815732110157801612efba94e455ce5c518b957ec98b6a5"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "purl": "pkg:npm/reusify@1.1.0"
     }
   ],
   "dependencies": [
@@ -204,6 +285,24 @@
     },
     {
       "ref": "pkg:npm/fastify@5.4.0",
+      "dependsOn": [
+        "pkg:npm/avvio@9.1.0"
+      ]
+    },
+    {
+      "ref": "pkg:npm/avvio@9.1.0",
+      "dependsOn": [
+        "pkg:npm/fastq@1.19.1"
+      ]
+    },
+    {
+      "ref": "pkg:npm/fastq@1.19.1",
+      "dependsOn": [
+        "pkg:npm/reusify@1.1.0"
+      ]
+    },
+    {
+      "ref": "pkg:npm/reusify@1.1.0",
       "dependsOn": []
     }
   ]
