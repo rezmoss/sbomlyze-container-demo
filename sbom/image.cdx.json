@@ -128,9 +128,6 @@
       "bom-ref": "pkg:npm/demo-api@1.0.0",
       "name": "demo-api",
       "version": "1.0.0",
-      "supplier": {
-        "name": "SBOMlyze Demo <security@example.com>"
-      },
       "hashes": [
         {
           "alg": "SHA-256",
