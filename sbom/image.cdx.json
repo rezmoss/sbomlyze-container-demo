@@ -176,6 +176,33 @@
         }
       ],
       "purl": "pkg:npm/fastify@5.4.0"
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:apk/alpine/copyleft-os-helper@1.0.0-r0",
+      "name": "copyleft-os-helper",
+      "version": "1.0.0-r0",
+      "supplier": {
+        "name": "Example Maintainers <security@example.com>"
+      },
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "f03751825bb1339d7762d469ad0d92c9904fc3ce516f9f57d4135421d5220448"
+        },
+        {
+          "alg": "SHA-512",
+          "content": "1c556554f886b823dcf3143da3e49ab0f6b45f69cb1c9ea428896da904793fa0834e0b55d31b85858cea55f12db390a975369171ad522ec593932e1026a241a1"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "GPL-3.0-only"
+          }
+        }
+      ],
+      "purl": "pkg:apk/alpine/copyleft-os-helper@1.0.0-r0"
     }
   ],
   "dependencies": [
@@ -183,7 +210,8 @@
       "ref": "pkg:oci/sbomlyze-container-demo@sha256:demo",
       "dependsOn": [
         "pkg:apk/alpine/alpine-baselayout@3.6.8-r1?arch=x86_64",
-        "pkg:npm/demo-api@1.0.0"
+        "pkg:npm/demo-api@1.0.0",
+        "pkg:apk/alpine/copyleft-os-helper@1.0.0-r0"
       ]
     },
     {
@@ -204,6 +232,10 @@
     },
     {
       "ref": "pkg:npm/fastify@5.4.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:apk/alpine/copyleft-os-helper@1.0.0-r0",
       "dependsOn": []
     }
   ]
