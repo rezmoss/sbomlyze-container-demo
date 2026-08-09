@@ -152,20 +152,20 @@
     },
     {
       "type": "library",
-      "bom-ref": "pkg:npm/fastify@5.4.0",
+      "bom-ref": "pkg:npm/fastify@5.5.0",
       "name": "fastify",
-      "version": "5.4.0",
+      "version": "5.5.0",
       "supplier": {
         "name": "fastify maintainers <security@example.com>"
       },
       "hashes": [
         {
           "alg": "SHA-256",
-          "content": "3b87b1db6f16aca869306ea7b58ce47a00ef3614f6d9cada9863d0b9c52c1df1"
+          "content": "2b1cf23a3ed04cd3f5740c8ebb8fc217796df00b7d255dcb4244cd22ee5b31d0"
         },
         {
           "alg": "SHA-512",
-          "content": "19da8796785403e47757a05b859130de61779b6fd9d7bc7d3e992bc18bf28e38bfb5776f4c9cdc0af30076aa5494a10109b43715a8cb3feb74c0c882a4b7be7d"
+          "content": "4cecc3d63e629510a90fd7ea82aa28092a7dfbd3388ee2db7840a3987b71d63b767064b3b7ce86316217ccf7094e864b918f08cd1648769c3468ef1cde37b5b8"
         }
       ],
       "licenses": [
@@ -175,7 +175,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/fastify@5.4.0"
+      "purl": "pkg:npm/fastify@5.5.0"
     }
   ],
   "dependencies": [
@@ -199,11 +199,11 @@
     {
       "ref": "pkg:npm/demo-api@1.0.0",
       "dependsOn": [
-        "pkg:npm/fastify@5.4.0"
+        "pkg:npm/fastify@5.5.0"
       ]
     },
     {
-      "ref": "pkg:npm/fastify@5.4.0",
+      "ref": "pkg:npm/fastify@5.5.0",
       "dependsOn": []
     }
   ]
