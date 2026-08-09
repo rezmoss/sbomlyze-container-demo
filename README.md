@@ -39,7 +39,7 @@ not run package-manager or PR-provided commands. Scenario details live in
 
 ## How this example is wired
 
-- `.github/workflows/sbom-review.yml` pins SBOMlyze v0.5.0 by its full commit SHA.
+- `.github/workflows/sbom-review.yml` pins SBOMlyze v0.5.1 by its full commit SHA.
 - `.github/sbom-policy.json` contains the intentionally strict demo policy.
 - `sbom/image.cdx.json` is the head SBOM and `baseline: git` is implicit.
 - PR comments are disabled, so fork PRs remain useful through the Job Summary.
