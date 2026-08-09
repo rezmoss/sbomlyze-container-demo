@@ -1,0 +1,11 @@
+{
+  "deny_licenses": [
+    "GPL-3.0-only",
+    "AGPL-3.0-only"
+  ],
+  "deny_integrity_drift": true,
+  "max_depth": 4,
+  "warn_new_transitive": true,
+  "warn_supplier_change": true,
+  "min_ntia_score": 90
+}

@@ -1,0 +1,210 @@
+{
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "serialNumber": "urn:uuid:4a87e8e9-0000-4000-8000-27021f83a783",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2026-08-09T00:00:00Z",
+    "authors": [
+      {
+        "name": "SBOMlyze Demo",
+        "email": "security@example.com"
+      }
+    ],
+    "tools": {
+      "components": [
+        {
+          "type": "application",
+          "name": "syft",
+          "version": "1.42.3"
+        }
+      ]
+    },
+    "component": {
+      "type": "container",
+      "bom-ref": "metadata-root",
+      "name": "sbomlyze-container-demo",
+      "version": "1.0.0"
+    },
+    "properties": [
+      {
+        "name": "syft:distro:name",
+        "value": "Alpine Linux"
+      },
+      {
+        "name": "syft:distro:version",
+        "value": "3.22"
+      },
+      {
+        "name": "syft:image:tag",
+        "value": "sbomlyze-container-demo:1.0.0"
+      }
+    ]
+  },
+  "components": [
+    {
+      "type": "container",
+      "bom-ref": "pkg:oci/sbomlyze-container-demo@sha256:demo",
+      "name": "sbomlyze-container-demo",
+      "version": "1.0.0",
+      "supplier": {
+        "name": "SBOMlyze Demo <security@example.com>"
+      },
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "eda65c40037296c1477b4dfe817a5fe9b6bbb4d0924c3b2718ebbb5d7acfeaa9"
+        },
+        {
+          "alg": "SHA-512",
+          "content": "acad73132f39568f35f1f2731def611784b6015d5ac2229609e0fdad3854df5e8fe2ecfbee1019bdbb04b87f7b84f16453429a4d194dcd741da6987c0a65fe5e"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:oci/sbomlyze-container-demo@sha256:demo"
+    },
+    {
+      "type": "operating-system",
+      "bom-ref": "pkg:apk/alpine/alpine-baselayout@3.6.8-r1?arch=x86_64",
+      "name": "alpine-baselayout",
+      "version": "3.6.8-r1",
+      "supplier": {
+        "name": "Alpine Linux <security@alpinelinux.org>"
+      },
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "3d57fc0446f600b03a883e81c5e3d4de4796334768e0727a22b3db57643ffe0f"
+        },
+        {
+          "alg": "SHA-512",
+          "content": "1e8e41036283f377bc7c053d51361ab94f0f0f0b00f8ccecbcf5a5030355275d2c7bc99d179c74758f8e8ae094749ee0d7d5c31d5e3c9a5b4137a452008fccf9"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "GPL-2.0-only"
+          }
+        }
+      ],
+      "purl": "pkg:apk/alpine/alpine-baselayout@3.6.8-r1?arch=x86_64"
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:apk/alpine/musl@1.2.5-r10?arch=x86_64",
+      "name": "musl",
+      "version": "1.2.5-r10",
+      "supplier": {
+        "name": "Alpine Linux <security@alpinelinux.org>"
+      },
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "6bffc84f7d7615359a23760e87a18c2c14b834a19d5cd4e53adffbb85d83323e"
+        },
+        {
+          "alg": "SHA-512",
+          "content": "f5e9d5889c14211050f0800f3f382b1145d90a060b39d0a85011d73653944bf3e4f3cc7537205fef2dae034a64894c9b5a6acbd7109f0786288e37b866dbde8a"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "purl": "pkg:apk/alpine/musl@1.2.5-r10?arch=x86_64"
+    },
+    {
+      "type": "application",
+      "bom-ref": "pkg:npm/demo-api@1.0.0",
+      "name": "demo-api",
+      "version": "1.0.0",
+      "supplier": {
+        "name": "SBOMlyze Demo <security@example.com>"
+      },
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "6f11b451cf77ea5ff70c1bf788bdcc5829e1ce77910413e981c3221388e4b06f"
+        },
+        {
+          "alg": "SHA-512",
+          "content": "917a3a04b7df7be043e9e866a3156570e2028e7bce0118e2d523e041f1840cab91194779f78f623552c9f15a751bc54966e4260568a1352ab853641e0006fc80"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:npm/demo-api@1.0.0"
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:npm/fastify@5.5.0",
+      "name": "fastify",
+      "version": "5.5.0",
+      "supplier": {
+        "name": "fastify maintainers <security@example.com>"
+      },
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "2b1cf23a3ed04cd3f5740c8ebb8fc217796df00b7d255dcb4244cd22ee5b31d0"
+        },
+        {
+          "alg": "SHA-512",
+          "content": "4cecc3d63e629510a90fd7ea82aa28092a7dfbd3388ee2db7840a3987b71d63b767064b3b7ce86316217ccf7094e864b918f08cd1648769c3468ef1cde37b5b8"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "purl": "pkg:npm/fastify@5.5.0"
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "pkg:oci/sbomlyze-container-demo@sha256:demo",
+      "dependsOn": [
+        "pkg:apk/alpine/alpine-baselayout@3.6.8-r1?arch=x86_64",
+        "pkg:npm/demo-api@1.0.0"
+      ]
+    },
+    {
+      "ref": "pkg:apk/alpine/alpine-baselayout@3.6.8-r1?arch=x86_64",
+      "dependsOn": [
+        "pkg:apk/alpine/musl@1.2.5-r10?arch=x86_64"
+      ]
+    },
+    {
+      "ref": "pkg:apk/alpine/musl@1.2.5-r10?arch=x86_64",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:npm/demo-api@1.0.0",
+      "dependsOn": [
+        "pkg:npm/fastify@5.5.0"
+      ]
+    },
+    {
+      "ref": "pkg:npm/fastify@5.5.0",
+      "dependsOn": []
+    }
+  ]
+}

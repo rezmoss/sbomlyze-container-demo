@@ -1,0 +1,33 @@
+name: SBOM review
+
+on:
+  pull_request:
+
+permissions:
+  contents: read
+  security-events: write
+
+jobs:
+  sbom-diff:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
+
+      - id: sbomlyze
+        uses: rezmoss/sbomlyze@8aca73bfd9d51a1634d6e897984f4e2702206dde # v0.5.0
+        with:
+          sbom-path: sbom/image.cdx.json
+          policy: .github/sbom-policy.json
+          fail-on: policy
+          sarif: true
+
+      # Fork PR tokens cannot upload SARIF. SBOMlyze's Job Summary still works.
+      - uses: github/codeql-action/upload-sarif@e4fba868fa4b1b91e1fdab776edc8cfbe6e9fb81 # v4.37.3
+        if: >-
+          always() &&
+          steps.sbomlyze.outputs.report-sarif != '' &&
+          github.event.pull_request.head.repo.full_name == github.repository
+        with:
+          sarif_file: ${{ steps.sbomlyze.outputs.report-sarif }}
