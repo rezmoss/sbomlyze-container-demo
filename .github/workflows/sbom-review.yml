@@ -16,7 +16,7 @@ jobs:
           fetch-depth: 0
 
       - id: sbomlyze
-        uses: rezmoss/sbomlyze@8aca73bfd9d51a1634d6e897984f4e2702206dde # v0.5.0
+        uses: rezmoss/sbomlyze@31503690611fda8ebba4ed2bd186eda000442594 # v0.5.1
         with:
           sbom-path: sbom/image.cdx.json
           policy: .github/sbom-policy.json
